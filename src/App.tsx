@@ -1,14 +1,7 @@
-import './App.css'
+import AppRoutes from "./pages/AppRoutes";
 
 function App() {
-
-  return (
-    <>
-      <h1 className="text-3xl font-bold underline bg-red-400">
-        james
-      </h1>
-    </>
-  )
+  return <AppRoutes />;
 }
 
-export default App
+export default App;
