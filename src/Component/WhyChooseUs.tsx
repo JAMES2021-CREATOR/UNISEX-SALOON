@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Award,
   Sparkles,
@@ -44,18 +45,15 @@ const features = [
 function WhyChooseUs() {
   return (
     <section className="bg-[#111111] py-24">
-
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-
           {/* Left Image */}
 
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: .8 }}
+            transition={{ duration: 0.8 }}
             className="relative"
           >
             <img
@@ -65,15 +63,10 @@ function WhyChooseUs() {
             />
 
             <div className="absolute bottom-8 left-8 bg-black/80 backdrop-blur-md p-6 rounded-2xl border border-yellow-500">
-              <h3 className="text-4xl font-bold text-yellow-500">
-                10+
-              </h3>
+              <h3 className="text-4xl font-bold text-yellow-500">10+</h3>
 
-              <p className="text-white">
-                Years of Excellence
-              </p>
+              <p className="text-white">Years of Excellence</p>
             </div>
-
           </motion.div>
 
           {/* Right Content */}
@@ -82,55 +75,41 @@ function WhyChooseUs() {
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: .8 }}
+            transition={{ duration: 0.8 }}
           >
-
             <p className="uppercase tracking-[6px] text-yellow-500 mb-4">
               Why Choose Us
             </p>
 
             <h2 className="text-5xl font-bold text-white leading-tight">
               Your Beauty,
-              <span className="block text-yellow-500">
-                Our Passion.
-              </span>
+              <span className="block text-yellow-500">Our Passion.</span>
             </h2>
 
             <p className="mt-8 text-gray-400 leading-8">
-              At Luxe Salon, we combine creativity, premium beauty
-              products, and expert professionals to deliver an
-              unforgettable salon experience that leaves you looking
-              and feeling your absolute best.
+              At Luxe Salon, we combine creativity, premium beauty products, and
+              expert professionals to deliver an unforgettable salon experience
+              that leaves you looking and feeling your absolute best.
             </p>
 
             <div className="mt-12 space-y-8">
-
               {features.map((item, index) => {
-
                 const Icon = item.icon;
 
                 return (
-
                   <motion.div
                     key={item.title}
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * .15 }}
+                    transition={{ delay: index * 0.15 }}
                     viewport={{ once: true }}
                     className="flex gap-5"
                   >
-
                     <div className="w-14 h-14 rounded-full bg-yellow-500 flex items-center justify-center flex-shrink-0">
-
-                      <Icon
-                        size={26}
-                        className="text-black"
-                      />
-
+                      <Icon size={26} className="text-black" />
                     </div>
 
                     <div>
-
                       <h3 className="text-xl font-semibold text-white">
                         {item.title}
                       </h3>
@@ -138,31 +117,22 @@ function WhyChooseUs() {
                       <p className="text-gray-400 mt-2 leading-7">
                         {item.description}
                       </p>
-
                     </div>
-
                   </motion.div>
-
                 );
-
               })}
-
             </div>
 
-            <button className="mt-12 flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-8 py-4 rounded-full transition">
-
+            <Link
+              to="/about"
+              className="mt-12 inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
+            >
               Learn More
-
               <ArrowRight size={20} />
-
-            </button>
-
+            </Link>
           </motion.div>
-
         </div>
-
       </div>
-
     </section>
   );
 }

@@ -1,34 +1,28 @@
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 const gallery = [
   {
-    image:
-      "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800",
+    image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800",
     category: "Hair Styling",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800",
+    image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800",
     category: "Makeup",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800",
+    image: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800",
     category: "Nails",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800",
+    image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800",
     category: "Barbing",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800",
+    image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800",
     category: "Bridal",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800",
+    image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800",
     category: "Facial",
   },
 ];
@@ -82,9 +76,12 @@ function GalleryPreview() {
                     {item.category}
                   </h3>
 
-                  <button className="mt-4 bg-yellow-500 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 transition">
+                  <Link
+                    to="/gallery"
+                    className="mt-4 inline-flex items-center bg-yellow-500 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-all duration-300 hover:scale-105"
+                  >
                     View More
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -93,9 +90,12 @@ function GalleryPreview() {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <button className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-8 py-4 rounded-full transition">
+          <Link
+            to="/gallery"
+            className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
+          >
             View Full Gallery
-          </button>
+          </Link>
         </div>
       </div>
     </section>
